@@ -15,6 +15,19 @@ public class nextRnd {
         Arrays.sort(arr);
 
         int inde=getpo(arr,0,n,k);
-        System.out.println(inde);
+        System.out.println(n-inde);
+    }
+    static int getpo(int[] arr,int l,int r,int key){
+        if(l<r){
+            int mid=(l+r)/2;
+            if(arr[mid]>key)
+                return l;
+            else if(arr[mid]<key)
+                return getpo(arr,mid+1,r,key);
+            return getpo(arr,l,mid-1,key);
+
+        }
+
+        return l;
     }
 }
