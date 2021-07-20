@@ -18,16 +18,14 @@ public class nextRnd {
         System.out.println(n-inde);
     }
     static int getpo(int[] arr,int l,int r,int key){
-        if(l<r){
+        while(l!=r){
             int mid=(l+r)/2;
-            if(arr[mid]>key)
-                return l;
-            else if(arr[mid]<key)
-                return getpo(arr,mid+1,r,key);
-            return getpo(arr,l,mid-1,key);
 
+            if(arr[mid]<=key)
+                l=mid+1;
+            else
+                r=mid;
         }
-
         return l;
     }
 }
