@@ -1,4 +1,4 @@
-package diffi8_10;
+//package diffi8_10;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -10,22 +10,12 @@ public class nextRnd {
         int k=sc.nextInt();
 
         int[] arr=new int[n];
-        for(int i=0;i<n;i++)    arr[i]=sc.nextInt();
-
-        Arrays.sort(arr);
-
-        int inde=getpo(arr,0,n,k);
-        System.out.println(n-inde);
-    }
-    static int getpo(int[] arr,int l,int r,int key){
-        while(l!=r){
-            int mid=(l+r)/2;
-
-            if(arr[mid]<=key)
-                l=mid+1;
-            else
-                r=mid;
+        int val=0;
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+            if(arr[i]!=0 && arr[i]>=arr[k-1])   val++;
         }
-        return l;
+
+        System.out.println(val);
     }
 }
