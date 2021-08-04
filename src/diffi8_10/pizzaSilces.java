@@ -10,17 +10,10 @@ public class pizzaSilces {
         int t=in.nextInt();
 
         while(t-->0){
-            int n=in.nextInt();
+            long n=in.nextLong();
 
-            long num=0;
-            if(n>8)
-                num=(long)Math.ceil((n-8)/2);
-
-            else
-                num=(long)Math.ceil((n-8)/2);
-
-            long tim=15+num*5;
-            sb.append(tim+"\n");
+            while(n<6 || n%2!=0)    n++;
+            sb.append(n/2*5+"\n");
         }
         System.out.println(sb.toString());
     }
