@@ -21,7 +21,7 @@ public class subPermutation {
             String s2=String.valueOf(arr);
 
             for(int i=0;i<n;i++){
-                int com=Character.compare(s.charAt(i),s2.charAt(i))
+                int com=Character.compare(s.charAt(i),s2.charAt(i));
                 if(com!=0) count++;
             }
             sb.append(count+"\n");
