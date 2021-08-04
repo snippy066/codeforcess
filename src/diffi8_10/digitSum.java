@@ -3,7 +3,7 @@
 import java.util.Scanner;
 
 public class digitSum {
-    static StringBuilder sb=new Scanner(System.in);
+    static StringBuilder sb=new StringBuilder();
     public static void main(String ar[]){
         Scanner in=new Scanner(System.in);
 
@@ -12,7 +12,7 @@ public class digitSum {
         while(t-->0){
             long n=in.nextLong();
 
-            sb.append(n/9+"\n");
+            sb.append((n+1)/10+"\n");
         }
 
         System.out.println(sb.toString());
