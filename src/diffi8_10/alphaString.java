@@ -14,17 +14,29 @@ public class alphaString {
             int len=s.length();
 
             int[] alph=new int[26];
+            int index=0,present_index=0;
+            int flag=0;
+
+            index=s.charAt(0)-'a';
+            present_index=index;
 
             for(int i=0;i<len;i++){
-                alph[s.charAt(i)-'a']++;
-            }
-            int flag=0;
-            for(int i=0;i<len;i++){
-                if(alph[i]==0){
-                    flag=1;
+                index=s.charAt(i)-'a';
+
+                if(index-present_index>1 || present_index-index>1) {
+                    flag = 1;
                     break;
                 }
+                alph[index]++;
+                present_index=index;
             }
+
+//            for(int i=0;i<len;i++){
+//                if(alph[i]==0){
+//                    flag=1;
+//                    break;
+//                }
+//            }
 
             if(flag==1)
                 sb.append("NO\n");
