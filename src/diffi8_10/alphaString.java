@@ -3,7 +3,7 @@
 import java.util.Scanner;
 
 public class alphaString {
-
+    static StringBuilder sb=new StringBuilder();
         public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
             int t = sc.nextInt();
@@ -20,9 +20,10 @@ public class alphaString {
                     }
                     len--;
                 }
-                if (flag == 0) System.out.println("YES");
-                else System.out.println("NO");
+                if (flag == 0) sb.append("YES\n");
+                else sb.append("NO\n");
             }
+            System.out.println(sb.toString());
         }
 
 }
