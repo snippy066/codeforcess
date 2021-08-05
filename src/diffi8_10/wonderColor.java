@@ -1,6 +1,7 @@
 //package diffi8_10;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class wonderColor {
@@ -22,8 +23,8 @@ public class wonderColor {
                     else hs.put(s[i],1);
                 }
                 long sum=0;
-                for(int i=0;i<s.length;i++){
-                    sum+=hs.get(s[i]);
+                for(String s1:hs.keySet()){
+                    sum+=hs.get(s1);
                 }
                 sb.append(sum/2+"\n");
             }
