@@ -3,46 +3,26 @@
 import java.util.Scanner;
 
 public class alphaString {
-    static StringBuilder sb=new StringBuilder();
-    public static void main(String ar[]){
-        Scanner in=new Scanner(System.in);
 
-        int t=in.nextInt();
-        in.nextLine();
-        while(t-->0){
-            String s=in.nextLine();
-            int len=s.length();
-
-            int[] alph=new int[26];
-            int index=0,present_index=0;
-            int flag=0;
-
-            index=s.charAt(0)-'a';
-            present_index=index;
-
-            for(int i=0;i<len;i++){
-                index=s.charAt(i)-'a';
-
-                if(index-present_index>1 || present_index-index>1) {
-                    flag = 1;
-                    break;
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            int t = sc.nextInt();
+            sc.nextLine();
+            while (t-- != 0) {
+                String s = sc.nextLine();
+                int len = s.length(), l = 0, r = len - 1, flag = 0;
+                while (l <= r) {
+                    if (s.charAt(l) == ((char) ('a' + len - 1))) l++;
+                    else if (s.charAt(r) == ((char) ('a' + len - 1))) r--;
+                    else {
+                        flag = 1;
+                        break;
+                    }
+                    len--;
                 }
-                alph[index]++;
-                present_index=index;
+                if (flag == 0) System.out.println("YES");
+                else System.out.println("NO");
             }
-
-//            for(int i=0;i<len;i++){
-//                if(alph[i]==0){
-//                    flag=1;
-//                    break;
-//                }
-//            }
-
-            if(flag==1)
-                sb.append("NO\n");
-            else
-                sb.append("YES\n");
         }
-        System.out.println(sb.toString());
-    }
+
 }
