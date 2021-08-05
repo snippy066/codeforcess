@@ -27,9 +27,9 @@ public class alphaString {
             }
 
             if(flag==1)
-                sb.append("NO");
+                sb.append("NO\n");
             else
-                sb.append("YES");
+                sb.append("YES\n");
         }
         System.out.println(sb.toString());
     }
