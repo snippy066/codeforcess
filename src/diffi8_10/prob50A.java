@@ -1,4 +1,4 @@
-package diffi8_10;
+//package diffi8_10;
 
 import java.util.Scanner;
 
@@ -8,6 +8,7 @@ public class prob50A {
 
         int n=sc.nextInt();
         int m=sc.nextInt();
-        
+
+        System.out.println((n*m)>>1);
     }
 }
